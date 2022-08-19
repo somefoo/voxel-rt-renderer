@@ -1,8 +1,20 @@
 # voxel-rt
 
-An interactive volume renderer. Supporting easily programmable shaders with support for transpancy, reflectivity (controllable with rougness).
-A temporal depth blur is also implemented.
+An interactive volume renderer. Supporting easily programmable shaders with support for transpancy, reflectivity (controllable with rougness), depth blur...
+
+OpenCL is used, ensure you have a GPU or software emulation.
+
 ![Peek 2022-08-20 01-03](https://user-images.githubusercontent.com/50917034/185717616-f295d057-c765-4a92-a032-02b7ab737f0e.gif)
+
+## How to build
+1. Clone project (with submodules!)
+2. Go into project folder
+3. `mkdir build`
+4. `cmake ..`
+5. `make -j4`
+
+## How to run
+1. `./run-voxel-rt path/to/nrrd_file.nrrd path/to/background.{dng,png,jpg,...}`
 
 # More Example Images
 <img src="https://user-images.githubusercontent.com/50917034/185715979-d749b8b1-4076-40a6-82cd-52497d9764e8.png" width="400">
