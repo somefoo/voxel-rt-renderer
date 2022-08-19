@@ -2,7 +2,7 @@
 
 An interactive volume renderer. Supporting easily programmable shaders with support for transpancy, reflectivity (controllable with rougness), depth blur...
 
-OpenCL is used, ensure you have a GPU or software emulation.
+This renderer focuses on rendering scenes interactively. OpenCL is used for this, ensure you have a GPU for interactive results!
 
 ![Peek 2022-08-20 01-03](https://user-images.githubusercontent.com/50917034/185717616-f295d057-c765-4a92-a032-02b7ab737f0e.gif)
 
