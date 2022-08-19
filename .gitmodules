@@ -1,0 +1,3 @@
+[submodule "lib/modern-opencl"]
+	path = lib/modern-opencl
+	url = git@github.com:somefoo/modern-opencl.git
