@@ -9,9 +9,8 @@ This renderer focuses on rendering scenes interactively. OpenCL is used for this
 ## How to build
 1. Clone project (with submodules!)
 2. Go into project folder
-3. `mkdir build`
-4. `cmake ..`
-5. `make -j4`
+3. `meson setup build`
+4. `ninja -C build`
 
 ## How to run
 1. `./run-voxel-rt path/to/nrrd_file.nrrd path/to/background.{dng,png,jpg,...}`
