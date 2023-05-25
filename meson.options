@@ -1,0 +1,1 @@
+option('opencl_kernel_folder_path', type: 'string', value: '../../kernels/', description: 'Path to opencl kernels.', yield : true)
