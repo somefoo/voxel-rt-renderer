@@ -1,4 +1,4 @@
-#clw_include_once "marching.cl"
+#include "marching.clhpp"
 
 __kernel void find_transition(__read_only image3d_t raw, __write_only image3d_t transition, int maximum_iteration_count){
   int4 position = {get_global_id(0), get_global_id(1), get_global_id(2), 0};

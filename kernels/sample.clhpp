@@ -1,3 +1,6 @@
+#pragma once
+#pragma OPENCL EXTENSION cl_khr_3d_image_writes : enable
+
 short read_3d(__read_only image3d_t raw, float3 position){
   const sampler_t sampler = CLK_FILTER_NEAREST | CLK_ADDRESS_CLAMP_TO_EDGE;
   float4 position4d_float = {position, 0.0f};           

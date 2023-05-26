@@ -1,5 +1,7 @@
-#clw_include_once "marching.cl"
-#clw_include_once "sample.cl"
+#pragma once
+#include "environment_map.clhpp"
+#include "marching.clhpp"
+#include "sample.clhpp"
 
 struct material_evaluation{
   struct ray reflected;

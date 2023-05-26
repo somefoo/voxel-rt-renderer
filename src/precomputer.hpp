@@ -1,14 +1,14 @@
 #pragma once
 
 #include <clw_image.hpp>
-#include <clw_function.hpp>
+#include <clw_precompiled_function.hpp>
 
 class precomputer{
   public:
   precomputer(clw::context& context):
-    m_cl_find_transition(context, "signed_distance_field.cl", "find_transition"),
-    m_cl_grow(context, "signed_distance_field.cl", "grow"),
-    m_cl_clean_edges(context, "signed_distance_field.cl", "clean_edges")
+    m_cl_find_transition(context, "signed_distance_field", "find_transition"),
+    m_cl_grow(context, "signed_distance_field", "grow"),
+    m_cl_clean_edges(context, "signed_distance_field", "clean_edges")
   {}
 
   void compute_signed_distance_field(clw::image<short>& raw, clw::image<short>& signed_distance_field){
@@ -31,10 +31,10 @@ class precomputer{
   }
 
   void reload(){
-    try{
-      m_cl_find_transition.reload();
-    }catch(std::runtime_error e){
-    }
+    //try{
+    //  m_cl_find_transition.reload();
+    //}catch(std::runtime_error e){
+    //}
   }
 
   private:

@@ -1,11 +1,12 @@
-#clw_include_once "sample.cl"
+#pragma once
+#include "sample.clhpp"
 
 struct ray{
   float3 origin; //Origin
   float3 direction; //Direction
 };
 
-#clw_include_once "intersect.cl"
+#include "intersect.clhpp"
 
 enum event_type{
   None,

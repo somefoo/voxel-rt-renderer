@@ -3,7 +3,7 @@
 #include "state.hpp"
 #include "frame.hpp"
 #include <clw_context.hpp>
-#include <clw_function.hpp>
+#include <clw_precompiled_function.hpp>
 
 class renderer{
   public:
@@ -12,9 +12,9 @@ class renderer{
     m_display_buffer(context, {width, height, 1}, true),
     m_raw_buffer_ping(context, {width, height, 1}, true),
     m_raw_buffer_pong(context, {width, height, 1}, true),
-    m_cl_renderer(context, "renderer.cl", "render"),
-    m_cl_update_frame(context, "renderer.cl", "update_display_frame"),
-    m_cl_clear_frame(context, "renderer.cl", "clear_frame")
+    m_cl_renderer(context, "renderer", "render"),
+    m_cl_update_frame(context, "renderer", "update_display_frame"),
+    m_cl_clear_frame(context, "renderer", "clear_frame")
   {}
 
   void render(const state& state_to_render, bool clear_first = false){
@@ -71,12 +71,12 @@ class renderer{
   }
 
   void reload(){
-    try{
-      m_cl_renderer.reload();
-      m_cl_update_frame.reload();
-      m_cl_clear_frame.reload();
-    }catch(std::runtime_error e){
-    }
+    //try{
+    //  m_cl_renderer.reload();
+    //  m_cl_update_frame.reload();
+    //  m_cl_clear_frame.reload();
+    //}catch(std::runtime_error e){
+    //}
   }
 
   private:

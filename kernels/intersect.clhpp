@@ -1,3 +1,4 @@
+#pragma once
 inline bool outside_volume(__read_only image3d_t raw, struct ray current){
   const int3 size = {get_image_width(raw), get_image_height(raw), get_image_depth(raw)};
   const float3 position = current.origin;

@@ -1,6 +1,7 @@
-#clw_include_once "marching.cl"
-#clw_include_once "environment_map.cl"
-#clw_include_once "shader.cl"
+#pragma once
+#include "marching.clhpp"
+#include "environment_map.clhpp"
+#include "shader.clhpp"
 
 #define RED (uint4)(255,0,0,0)
 #define GREEN (uint4)(0,255,0,0)

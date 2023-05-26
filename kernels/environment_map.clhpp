@@ -1,3 +1,4 @@
+#pragma once
 float4 sample_environment_map(struct ray current, __read_only image2d_t environment_map){
   const sampler_t smp = CLK_FILTER_LINEAR | CLK_ADDRESS_CLAMP_TO_EDGE | CLK_NORMALIZED_COORDS_TRUE;
   const float aspect = get_image_width(environment_map)/get_image_height(environment_map);
